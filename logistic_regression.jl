@@ -47,7 +47,7 @@ module LogisticRegression
 
     function train!(X::DataFrame, y::DataFrame, model::LogisticRegressionModel, num_iterations::Int)
         X = Matrix(X)
-        y = Matrix(y)
+        y = Array(y)
         return backpropagation!(X, y, model, num_iterations)
     end
 
